@@ -6,4 +6,6 @@ services:
     network_mode: host
     container_name: kea-dhcp6
     volumes:
-      - ./kea.conf:/etc/kea/kea.conf  # optional, if you want to use a local config 
+      - ./kea.conf:/etc/kea/kea.conf  # optional, if you want to use a local config
+      - /var/log/kea:/var/log/kea
+      - /var/lib/kea:/var/lib/kea 

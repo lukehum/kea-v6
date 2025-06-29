@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  kea-dhcp6:
+    build: .
+    network_mode: host
+    container_name: kea-dhcp6
+    volumes:
+      - ./kea.conf:/etc/kea/kea.conf  # optional, if you want to use a local config 
